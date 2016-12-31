@@ -1,5 +1,3 @@
-package com.company;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Demo {
@@ -7,7 +5,6 @@ public class Demo {
     public static void main(String[] args) {
         int x=0;
         int border=1899;
-        int max_initial=20000;
         ArrayList<int[]> list=new ArrayList<int[]>();
         ArrayList<int[]> expression=new ArrayList<int[]>();
         Scanner sc=new Scanner(System.in);
@@ -32,9 +29,8 @@ public class Demo {
             }
         }
         sum+=list.get(n-1)[0];
-
-        int max=max_initial;
-        int min=0;
+        int max=Integer.MAX_VALUE;
+        int min=Integer.MIN_VALUE;
         for(int[] temp:expression){
             int num=temp[0];
             if(temp[1]==0){
